@@ -62,13 +62,15 @@ function markupCountryInfo(country) {
   return country.map(({ name, flags, capital, population, languages }) => {
     return `<ul class="country-info__list">
     <li class="country-info__list--item">
-        <img class="country-info__list--img" src="${flags.png}" alt="Flag of ${name.official}" /><h1>${name.official}</h1>
+        <img class="country-info__list--img" src="${flags.png}" alt="Flag of ${
+      name.official
+    }" /><h1>${name.official}</h1>
     </li>
     <li class="country-info__list--item"><span class="country-info__item--text">Capital: </span>${capital}</li>
     <li class="country-info__list--item"><span class="country-info__item--text">Population: </span>${population}</li>
     <li class="country-info__list--item"><span class="country-info__item--text">Languages: </span>${Object.values(
-        languages,
-      ).join(', ')}</li>
+      languages
+    ).join(', ')}</li>
     </ul>`;
   });
 }
